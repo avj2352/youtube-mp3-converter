@@ -9,7 +9,11 @@ A Python executable script to download youtube videos online, even convert them 
 ## Install
 
 ```bash
+# deprecated, no need to install brew cask
 brew install youtube-dl
+
+# Just run python script
+python3 ./youtube_download.py
 ```
 
 ## Convert youtube links to MP3
