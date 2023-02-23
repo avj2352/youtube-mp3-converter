@@ -1,0 +1,11 @@
+# ignore folders
+venv/
+*/__pycache__/
+
+# ignore files
+**/*.mp3
+**/*.jpg
+**/*.jpeg
+**/*.png
+.DS_Store
+**/.DS_Store
