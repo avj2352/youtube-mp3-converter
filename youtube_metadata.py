@@ -1,7 +1,7 @@
 '''
 Update mp3 metadata using eyed3 lib
 '''
-from util.artwork import update_artwork
+from util.simple_artwork import update_artwork
 from util.parse_options import parse_options
 from util.metadata import update_metadata
 import logging
@@ -23,7 +23,7 @@ def add_artwork(files: dict):
     if not files or not files.get('art'):
         logging.debug(f"No artwork file found, Skipping Artwork update")
         return
-    logging.debug(f"MP3 and artwork files: {str(files)}")
+    # logging.debug(f"MP3 and artwork files: {str(files)}")
     update_artwork(files)
 
 def add_metadata(files: dict):
@@ -43,7 +43,7 @@ def add_metadata(files: dict):
     meta['artist'] = artist if artist != '' else ''
     meta['album'] = album if album != '' else ''
     meta['genre'] = genre if genre != '' else 'Soundtrack'
-    logging.debug(f"Configuring metadata...{str(meta)}")
+    # logging.debug(f"Configuring metadata...{str(meta)}")
     update_metadata(meta)
 
 def main():
