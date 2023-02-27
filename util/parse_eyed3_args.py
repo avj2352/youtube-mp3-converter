@@ -14,7 +14,7 @@ long_options = ["music=", "art="]
 value_map = {}
 
 
-def parse_options() -> dict:
+def parse_eyed3_options() -> dict:
     try:
         arguments, _ = getopt.getopt(arg_list, options, long_options)
         # check each argument present

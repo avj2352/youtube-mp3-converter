@@ -2,7 +2,7 @@
 Update mp3 metadata using eyed3 lib
 '''
 from util.simple_artwork import update_artwork
-from util.parse_options import parse_options
+from util.parse_eyed3_args import parse_eyed3_options
 from util.metadata import update_metadata
 import logging
 import os
@@ -47,7 +47,7 @@ def add_metadata(files: dict):
     update_metadata(meta)
 
 def main():
-    files: dict = parse_options()
+    files: dict = parse_eyed3_options()
     # edge case
     if not files or not files.get('music'):
         logging.debug(f"No mp3 file found, Try again")
