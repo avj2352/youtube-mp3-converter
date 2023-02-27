@@ -52,10 +52,10 @@ def main():
     if not files or not files.get('music'):
         logging.debug(f"No mp3 file found, Try again")
         return
-    # add artwork
-    add_artwork(files) 
     # add metadata
     # add_metadata(files)
+    # add artwork
+    add_artwork(files) 
 
 
 # FOR TESTING
