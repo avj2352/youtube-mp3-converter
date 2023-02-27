@@ -1,6 +1,7 @@
 # Youtube Downloader
 
 ## Important Links
+- [Updating Metadata using Python's eyed3 library](https://stackoverflow.com/questions/8948/accessing-mp3-metadata-with-python)r
 - [Youtube to MP3 converter python script](https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/)
 - [Intro to Pytube - Freecodecamp](https://www.freecodecamp.org/news/python-program-to-download-youtube-videos/)
 - [Youtube DL tutorial](https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/)
@@ -27,7 +28,7 @@ python3 ./youtube_download.py
 youtube-dl -x --audio-format mp3 'https://www.youtube.com/watch?v=MSzOcQWJNUY'
 
 # script 02
-youtube-dl -x --audio-format mp3 'https://www.youtube.com/watch?v=ND5snVy4Fnw'
+youtube-dl -x --audio-format mp3 'https://www.youtube.com/watch? ev=ND5snVy4Fnw'
 ```
 
 # NodeJS - Youtube URL to mp3 converter
@@ -71,3 +72,5 @@ youtube-dl -x --audio-format mp3 'https://www.youtube.com/watch?v=uf39PoE6bD8'
 
 ### Hogwarts Legacy - Suitesound (extended)
 youtube-dl -x --audio-format mp3 'https://www.youtube.com/watch?v=rTg_36mgo3g'
+
+
