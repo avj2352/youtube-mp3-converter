@@ -53,7 +53,7 @@ def main():
         logging.debug(f"No mp3 file found, Try again")
         return
     # add metadata
-    # add_metadata(files)
+    add_metadata(files)
     # add artwork
     add_artwork(files) 
 

@@ -1,4 +1,5 @@
 # ignore folders
+download/
 venv/
 */__pycache__/
 
