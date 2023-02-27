@@ -1,7 +1,7 @@
 '''
 Update mp3 metadata using eyed3 lib
 '''
-from util.simple_artwork import update_artwork
+from util.artwork import update_artwork
 from util.parse_eyed3_args import parse_eyed3_options
 from util.metadata import update_metadata
 import logging

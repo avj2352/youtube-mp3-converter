@@ -1,4 +1,67 @@
-# Youtube Downloader
+# Youtube MP3 Toolsuite
+
+Simple CLI application to download, convert to MP3 format, and add metadata information.
+Metadata information include
+- Title
+- Artist
+- Album Artist
+- Genre
+- Album Artwork
+
+
+## Pre-requisite
+
+Tested on both windows and linux. You need to have the following installed
+
+- Clone the project, Setup `venv`
+- Activate your virtual environment
+
+```bash
+# on windows
+./venv/scripts/activate
+
+# on linux/mac
+source ./venv/scripts/Activate
+
+```
+- Run the following to install dependant libraries
+
+```python
+pip install -r requirements.txt
+```
+- Also python being a general purpose programming language, cannot convert media files into mp3 format. You need to install `ffmpeg` audio-encoder library and have it's executable registered in the path environment variable. You can do this on windows easily using `choco install ffmpeg`, choco  will install and set the path requirements. On Macbook, use `brew install ffmpeg`.
+
+
+## Youtube Downloader
+
+To download from youtube, run the `./youtube_download.py` script using Python
+
+```bash
+# on linux
+python3 ./youtube_download.py
+# on windows
+python ./youtube_download.py
+```
+
+## Youtube Converter
+
+You need to convert the downloaded file to an `Actual` MP3 audio file. Run the following script from terminal
+
+```bash
+# s - source path (source location of the media file)
+# d - destination path (where you want the converted file to reside)
+python3 ./youtube_converter.py -s ./download/harry_potter.mp3 -d ./download/harry_potter_convert.mp3
+```
+
+## Youtube Metadata
+
+In order to add metadata information (including artwork file) run the following script from terminal
+
+```bash
+# m - path to the mp3 file
+# a - path to the artwork file (optional)
+python3 ./youtube_metadata.py -m ./download/harry_potter_ea_games_soundtrack_convert.mp3 -a ./download/harry_potter.jpeg
+```
 
 ## Important Links
 - [Updating Metadata using Python's eyed3 library](https://stackoverflow.com/questions/8948/accessing-mp3-metadata-with-python)

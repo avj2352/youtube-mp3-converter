@@ -1,25 +1,17 @@
-'''
-Update MP3 file with media artwork
-'''
-from mutagen.mp3 import MP3
-from mutagen.id3 import ID3, APIC, error
+import eyed3
+
+from eyed3.id3.frames import ImageFrame
+import mimetypes
 import logging
 
-def update_artwork(files: dict): 
-    mp3file=files.get('music')
-    audio = MP3(mp3file, ID3=ID3)
-    image_data = open(files.get('art'),'rb').read()
-    try:
-        audio.add_tags()
-    except Exception as err:
-        logging.debug(f"No need to create: ${str(err)}")
-    audio.tags.add(
-        APIC(
-            encoding=1,
-            mime='image/png',
-            type=3,
-            desc=u'Cover',
-            data=image_data
-            )
-        )
-    audio.save()
+def update_artwork(files: dict):
+    audiofile = eyed3.load(files.get('music'))
+    file_type = mimetypes.guess_type(files.get('art'))
+    mp3_type = mimetypes.guess_type(files.get('music'))
+    # logging.debug(f"Artwork file: {files.get('art')}")
+    logging.debug(f'MP3 File type: {mp3_type[0]}')
+    logging.debug(f'Artwork File type: {file_type[0]}')
+    if audiofile.tag is None:
+        audiofile.initTag()
+    audiofile.tag.images.set(ImageFrame.FRONT_COVER, open(files.get('art'), 'rb').read(), str(file_type[0]))
+    audiofile.tag.save(version=eyed3.id3.ID3_V2_3)
