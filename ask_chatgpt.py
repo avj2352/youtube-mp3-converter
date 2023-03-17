@@ -22,7 +22,19 @@ def chat_gpt(text: str):
             )
     typing_print(response.choices[0].text)
 
-
 # print(OPEN_AI_API_KEY)
-text:str = input('🤖 Ask chatgpt: ')
-chat_gpt(text) if text != '' else print('Invalid input, ask a valid question')
+
+# Keep prompting until "thanks" is entered
+while True:
+    try:        
+        prompt: str = input('\n🤖 Ask chatgpt: ')
+        if prompt == "" or prompt == "thanks" or prompt == "quit" or prompt == "q":
+            break
+        else:
+            chat_gpt(prompt)
+            continue
+    except ValueError:
+        print("🤖 Sorry, I didn't understand that!")
+        continue
+
+print("🤖 Nice chatting!")
