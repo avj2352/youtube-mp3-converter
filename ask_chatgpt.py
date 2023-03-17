@@ -24,5 +24,5 @@ def chat_gpt(text: str):
 
 
 # print(OPEN_AI_API_KEY)
-text:str = input('Ask chatgpt: ')
+text:str = input('🤖 Ask chatgpt: ')
 chat_gpt(text) if text != '' else print('Invalid input, ask a valid question')
