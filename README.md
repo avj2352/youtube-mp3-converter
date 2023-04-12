@@ -1,5 +1,24 @@
 # Youtube MP3 Toolsuite
 
+## ERROR! 
+Read more about the error in the link below
+-[NoneType object has no attribute span](https://github.com/pytube/pytube/issues/1498)
+
+I just patched this error by simply modifying venv/.local/lib/python3.7/site-packages/pytube/cipher.py Line 411
+
+```python
+transform_plan_raw = find_object_from_startpoint(raw_code, match.span()[1] - 1)
+```
+to
+```python
+transform_plan_raw = js
+
+```
+And everything works fine. Hope this can solve your problem.
+Thank you very much! It worked perfectly here. 
+I have no idea how this change fixed the bug (if you want to explain that would be great), but it worked perfectly anyway.
+
+
 ## Important Links
 - [Updating Metadata using Python's eyed3 library](https://stackoverflow.com/questions/8948/accessing-mp3-metadata-with-python)
 - [Youtube to MP3 converter python script](https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/)
