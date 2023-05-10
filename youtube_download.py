@@ -8,7 +8,7 @@ import os
 
 def Download(link: str):
     print(f"Downloading youtube URL: {link}...")
-    youtubeObject = YouTube(link, on_progress_callback=on_progress)
+    youtubeObject = YouTube(link, on_progress_callback=on_progress, use_oauth=True, allow_oauth_cache=True)
     # extract audio
     video = youtubeObject.streams.filter(only_audio=True).first()
     try:
