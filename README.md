@@ -1,5 +1,24 @@
 # Youtube MP3 Toolsuite
 
+## Instructions
+
+- You need `ffmpeg` encoder installed in your machine in order for this Python script to work
+- Clone / Download the ZIP version into your local machine
+- Setup a Local environment using `python -m venv venv`
+- Activate the local environment
+```bash
+  # For Macbook
+  source ./venv/Scripts/activate
+
+  # For windows
+  ./venv/Scripts/activate.bat
+```
+- Run pip install by reading of requirements.txt file
+```bash
+pip install -r requirements.txt
+```
+
+
 ## ERROR! 
 Read more about the error in the link below
 -[NoneType object has no attribute span](https://github.com/pytube/pytube/issues/1498)
