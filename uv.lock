@@ -1,0 +1,22 @@
+version = 1
+requires-python = ">=3.11"
+
+[[package]]
+name = "pytubefix"
+version = "8.12.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2f/43/528a5c70382499fdad0af998c8d06bcd0ada1a92ed30623396c144f9b9c0/pytubefix-8.12.3.tar.gz", hash = "sha256:d972188731fb7c3eeec8aa7d80a8ebf09e483350d79f6c96c652bfdc1e9208fe", size = 733932 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/15/be/17c742d5f66039947e6ee973187ea1ddc6bfc2de7885a51b49b4bdc7e62f/pytubefix-8.12.3-py3-none-any.whl", hash = "sha256:b051e4946a1bd1d52957508d55a8b6b19c47396ccf2084c3612eb3353583d99e", size = 731530 },
+]
+
+[[package]]
+name = "youtube-converter"
+version = "1.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pytubefix" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytubefix", specifier = ">=8.12.2" }]
