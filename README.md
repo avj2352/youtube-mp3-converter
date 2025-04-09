@@ -8,7 +8,10 @@ Metadata information include
 - Genre
 - Album Artwork
 
-> You need `ffmpeg` encoder installed in your machine in order for this Python script to work
+> You need `ffmpeg` encoder installed in your machine in order for the following scripts to work
+
+- youtube_converter.py
+- youtube_metadata.py
 
 ## Important Links
 
