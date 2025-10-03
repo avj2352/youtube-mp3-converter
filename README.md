@@ -89,3 +89,27 @@ In order to add metadata information (including artwork file) run the following 
 # a - path to the artwork file (optional)
 python3 ./youtube_metadata.py -m ./download/harry_potter_ea_games_soundtrack_convert.mp3 -a ./download/harry_potter.jpeg
 ```
+
+
+## PytubeFix - 10/03/25
+
+- Github link: [https://github.com/JuanBindez/pytubefix/issues/542](Github issue)
+- Title: `pytubefix.exceptions.RegexMatchError: get_initial_function_name: could not find match for multiple in https://youtube.com/s/player/377ca75b/player_ias.vflset/en_US/base.js #542`
+
+
+```bash
+@NannoSilver and @felipeucelli many thanks. i am terrible with git. how do i install felipeucelli@ca8c67f?
+
+i did: pip install "pytubefix @ git+https://github.com/felipeucelli/pytubefix.git@ca8c67f"
+
+tested it but instead of receiving usual output (the title of a video i own) i am getting some kind log that ends with a broken pipe
+
+i know it is a newbe question....
+pip install --upgrade --force-reinstall --no-cache-dir git+https://github.com/felipeucelli/pytubefix.git@sig-nsig
+```
+
+UV command to for the above pip command
+
+```bash
+uv pip install --reinstall --no-cache git+https://github.com/felipeucelli/pytubefix.git@sig-nsig
+```
