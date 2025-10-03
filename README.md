@@ -104,7 +104,7 @@ i did: pip install "pytubefix @ git+https://github.com/felipeucelli/pytubefix.gi
 
 tested it but instead of receiving usual output (the title of a video i own) i am getting some kind log that ends with a broken pipe
 
-i know it is a newbe question....
+i know it is a newbie question....
 pip install --upgrade --force-reinstall --no-cache-dir git+https://github.com/felipeucelli/pytubefix.git@sig-nsig
 ```
 
