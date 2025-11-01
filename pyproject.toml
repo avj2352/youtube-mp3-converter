@@ -4,4 +4,7 @@ version = "1.0.0"
 description = "python module to convert youtube videos to mp3 using pytubefix"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pydub>=0.25.1",
+    "pytubefix>=10.1.1",
+]
