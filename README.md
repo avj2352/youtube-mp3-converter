@@ -15,6 +15,7 @@ Metadata information include
 
 ## Important Links
 
+- [PytubeFix Github repo link](https://github.com/JuanBindez/pytubefix)
 - [Updating Metadata using Python's eyed3 library](https://stackoverflow.com/questions/8948/accessing-mp3-metadata-with-python)
 - [Youtube to MP3 converter python script](https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/)
 - [Intro to Pytube - Freecodecamp](https://www.freecodecamp.org/news/python-program-to-download-youtube-videos/)
