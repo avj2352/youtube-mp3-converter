@@ -101,7 +101,7 @@ def main():
         print("Error: No input files specified or found")
         sys.exit(1)
     
-    print(f"Found {len(input_files)} m4a files:")
+    print(f"Found {len(input_files)} audio files:")
     for i, file in enumerate(input_files, 1):
         print(f"  {i}. {Path(file).name}")
     
