@@ -5,6 +5,8 @@ https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/
 from pytubefix import YouTube
 from pytubefix.cli import on_progress
 import os
+#..custom
+from to_snake_case import to_snake_case 
 
 def Download(link: str):
     print(f"Downloading youtube URL: {link}...")
@@ -22,6 +24,9 @@ def Download(link: str):
         mp3_file = base + '.mp3'
         os.rename(audio_file, mp3_file)
         print(f"Download has been completed: {video.title}")
+        new_file_name: str = to_snake_case(video.title)
+        print(f"Renaming file from {video.title} -> {new_file_name}")
+        os.rename(mp3_file, f'./download/{new_file_name}.mp3')
     except Exception as e:
         print(f"Error occured: \n {format(e)}")
 
