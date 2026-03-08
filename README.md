@@ -250,6 +250,7 @@ uv run combine_audio.py \
 ## PytubeFix - 10/03/25
 
 - Github link: [https://github.com/JuanBindez/pytubefix/issues/542](Github issue)
+- [Github fix link](https://github.com/JuanBindez/pytubefix/pull/582/changes/25230f672eaf772b262f6a1fae260b2c573c8076)
 - Title: `pytubefix.exceptions.RegexMatchError: get_initial_function_name: could not find match for multiple in https://youtube.com/s/player/377ca75b/player_ias.vflset/en_US/base.js #542`
 
 
@@ -269,3 +270,17 @@ UV command to for the above pip command
 ```bash
 uv pip install --reinstall --no-cache git+https://github.com/felipeucelli/pytubefix.git@sig-nsig
 ```
+
+
+- Navigate to .venv/python3.14/../site-packages/pytubefix/extract.py
+- Add the following lines starting from #278
+
+```python
+broken_ids = ["6c5cb4f4", "44899b31"]
+    for bid in broken_ids:
+        if bid in base_js:
+            base_js = base_js.replace(bid, "9f4cc5e4")
+            break
+```
+
+---

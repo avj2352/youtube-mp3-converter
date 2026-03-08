@@ -7,5 +7,6 @@ requires-python = ">=3.14"
 dependencies = [
     "mutagen>=1.47.0",
     "pydub>=0.25.1",
-    "pytubefix>=10.3.6",
+    "ytmusicapi==1.11.5",
+    "pytubefix==v10.3.8",
 ]
